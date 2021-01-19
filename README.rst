@@ -1,4 +1,4 @@
-wpm — measure and improve your typing speed
+wpm — measure and improve your typing speed (Fork: https://github.com/cslarsen/wpm/)
 ===========================================
 |versions| |license| |pypi|
 
@@ -23,21 +23,19 @@ Features
 How to install
 --------------
 
-The recommended way is to install via PyPi
-
+Clone the code from my fork
 .. code:: bash
 
-    $ pip install wpm
+    $ git clone https://github.com/DevHyperCoder/wpm
 
-The above usually requires ``sudo``. If you don't want to install it
-system-wide, you can use ``pip install wpm --user``.
-
-Remember to check for upgrades with ``pip install --upgrade wpm``. You can also
-install it from the source repository with
+Install using ``pip``
 
 .. code:: bash
 
     $ pip install . [--user]
+
+The above usually requires ``sudo``. If you don't want to install it
+system-wide, you can use ``pip install wpm --user``.
 
 To just test the app without installing, type ``make run``.
 
@@ -132,7 +130,7 @@ zero-based integer will be used.
 Format of race history
 ----------------------
 
-wpm will save scores in a CSV file in `~/.wpm.csv`. This file can be loaded
+wpm will save scores in a CSV file in `~/.config/wpm/wpm.csv`. This file can be loaded
 directly into Excel. It uses the same format as TypeRacer, with the addition of
 a few extra columns at the end. That means is should be possible to use
 existing TypeRacer score history tools with this file with minor modifications.
@@ -178,7 +176,7 @@ games".
 The ~/.wpmrc file
 -----------------
 
-The first time you start wpm, it writes a `.wpmrc` file to your home directory.
+The first time you start wpm, it writes a `wpm.rc` to `~/.config/wpm/`
 It contains user settings that you can change. They are given in the table
 below.
 

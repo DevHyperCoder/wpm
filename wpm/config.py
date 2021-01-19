@@ -109,8 +109,14 @@ class Config(object):
     config = None
 
     def __init__(self):
+        WPM_RC_Dir = os.path.expanduser("~/.config/wpm")
+
         Config.config = configparser.ConfigParser()
-        self.filename = os.path.expanduser("~/.wpmrc")
+
+        if not os.path.exists(WPM_RC_Dir):
+            os.makedirs(WPM_RC_Dir)
+
+        self.filename = os.path.join(WPM_RC_Dir,"wpmrc")
 
         if os.path.isfile(self.filename):
             self.load()
